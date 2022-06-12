@@ -1,0 +1,135 @@
+
+main section{
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+main section h1{
+    font-size: 3.5rem;
+    margin-block: 5rem;
+
+}
+#main__section-hello p:nth-child(2){
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 2px solid rgb(21, 12, 102); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 2px; /* Adjust as needed */
+    animation: 
+        typing 2.7s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(20, 37, 112); }
+}
+
+main section:nth-child(1){
+    margin-top: 18rem;
+    margin-bottom: 20rem;
+}
+
+#main__section-hello p{
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+}
+
+#main__section-hello p:nth-child(2){
+    font-size: 4rem;
+    line-height: 120%;
+    margin-block: 1rem;
+    font-weight: 500;
+
+}
+
+#main__section-hello p:nth-child(3){
+    line-height: 260%;
+}
+
+
+#main__section-about-me{
+    background-color: rgb(16, 18, 31);
+    text-align: left;
+    /* padding: 2rem; */
+    border-bottom: 0.2px solid var(--gray-500)
+
+}
+
+
+
+#main__section-about-me p{
+
+    line-height: 200%;
+    font-size: 1.9rem;
+    color: var(--gray-200);
+
+}
+
+
+#main__section-projects{
+    border-bottom: 0.2px solid var(--gray-500)
+
+}
+
+.main__section-projects__cards{
+    margin-bottom: 2rem;
+}
+
+
+.main__section-projects__cards__card{
+    /* background-color: tomato; */
+    /* margin-inline: .5rem; */
+    width: 100%;
+    text-align: left;
+    background-color: rgb(6, 14, 29);
+    padding: 2rem;
+    border-radius:.5rem;
+}
+
+.main__section-projects__cards__card-h2{
+    /* color: red; */
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+
+}
+
+.main__section-projects__cards__card-text{
+    color: var(--gray-200);
+    line-height: 220%;
+    font-size: 1.8rem;
+    letter-spacing: .07rem;
+}
+
+
+
+.main__section-projects__link-github {
+    color: rgb(31, 28, 187);
+    letter-spacing: .1rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    display: inline-block;
+}
+
+.main__section-knowledge__icons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__section-knowledge__icons img{
+    max-width: 10rem;
+}
+
+
+
