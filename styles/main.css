@@ -1,4 +1,7 @@
 
+
+/* =========== GERAL ====================== */
+
 main section{
     text-align: center;
     padding: 4rem 2rem;
@@ -7,14 +10,23 @@ main section{
 main section h1{
     font-size: 3.5rem;
     margin-block: 5rem;
+    letter-spacing: .2rem;
 
 }
+
+img.main__section-hello__img-i-paulo{
+    display: none;
+}
+
+
+/* =========== SECTION HELLO ====================== */
+
 #main__section-hello p:nth-child(2){
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: 2px solid rgb(21, 12, 102); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: 2px; /* Adjust as needed */
+    letter-spacing: 1px; /* Adjust as needed */
     animation: 
         typing 2.7s steps(40, end),
         blink-caret .75s step-end infinite;
@@ -22,31 +34,39 @@ main section h1{
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+    from { width: 0 }
+    to { width: 100% }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: rgb(20, 37, 112); }
+    from, to { border-color: transparent }
+    50% { border-color: rgb(20, 37, 112); }
 }
 
 main section:nth-child(1){
     margin-top: 18rem;
-    margin-bottom: 20rem;
+    margin-bottom: 10rem;
 }
+
 
 #main__section-hello p{
     font-size: 2.5rem;
     letter-spacing: .1rem;
+    /* border: 1px solid tomato; */
+    /* display: block; */
+    /* width:20rem; */
+    /* width: min-content; */
 }
 
 #main__section-hello p:nth-child(2){
     font-size: 4rem;
-    line-height: 120%;
-    margin-block: 1rem;
+    line-height: 140%;
+    /* margin-block: 1rem; */
     font-weight: 500;
+
+    margin-inline: 0;
+    /* width:fit-content; */
 
 }
 
@@ -54,16 +74,59 @@ main section:nth-child(1){
     line-height: 260%;
 }
 
+a.main__section-hello__container_message_btn-contact{
+    /* background-color: rgba(42, 63, 156, .9); */
+
+    background-color: rgba(36, 75, 184, 0.726);
+
+
+    padding: 1.5rem 4.5rem;
+    margin-top: 3rem;
+    display: inline-block;
+    border-radius: .5rem;
+    color: #fff;
+    letter-spacing: .16rem;
+    font-size: 1.8rem;
+    border: none;
+    transition: filter .3s
+    
+}
+
+a.main__section-hello__container_message_btn-contact:hover{
+    filter:brightness(1.4)
+}
+
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-.7rem); }
+    100% { transform: translateY(0rem); }
+}
+
+img.main__section-hello__img-icon-arrow{
+    position:absolute;
+    bottom: 3rem;
+    left:50%;
+    transform: translateX(-50%);
+
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+
+/* =========== SECTION ABOUT ME ====================== */
+
 
 #main__section-about-me{
-    background-color: rgb(16, 18, 31);
+    background-color: var(--blue-800);
     text-align: left;
     /* padding: 2rem; */
     border-bottom: 0.2px solid var(--gray-500)
 
 }
-
-
 
 #main__section-about-me p{
 
@@ -74,22 +137,23 @@ main section:nth-child(1){
 }
 
 
+/* =========== SECTION PROJECTS ====================== */
+
 #main__section-projects{
     border-bottom: 0.2px solid var(--gray-500)
 
 }
 
-.main__section-projects__cards{
-    margin-bottom: 2rem;
+.main__section-projects__cards__card {
+    margin-bottom: 3rem;
 }
-
 
 .main__section-projects__cards__card{
     /* background-color: tomato; */
     /* margin-inline: .5rem; */
     width: 100%;
     text-align: left;
-    background-color: rgb(6, 14, 29);
+    background-color: rgb(5, 15, 36);
     padding: 2rem;
     border-radius:.5rem;
 }
@@ -103,19 +167,25 @@ main section:nth-child(1){
 
 .main__section-projects__cards__card-text{
     color: var(--gray-200);
-    line-height: 220%;
+    line-height: 180%;
     font-size: 1.8rem;
     letter-spacing: .07rem;
 }
 
-
-
 .main__section-projects__link-github {
-    color: rgb(31, 28, 187);
+    color: rgb(21, 203, 209);
     letter-spacing: .1rem;
     margin-top: 2rem;
     margin-bottom: 4rem;
     display: inline-block;
+}
+
+
+/* =========== SECTION KNOWLEDGE ====================== */
+
+#main__section-knowledge{
+    background-color: var(--blue-800);
+
 }
 
 .main__section-knowledge__icons{
@@ -125,11 +195,89 @@ main section:nth-child(1){
     gap: 4rem;
     align-items: center;
     justify-content: center;
+    /* border: 1px solid purple; */
 }
 
 .main__section-knowledge__icons img{
     max-width: 10rem;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+
+/* @keyframes example {
+    0%,
+    50%{bottom: 1rem}
+    100% {bottom:2rem;}
+} */
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-1.5rem); }
+    100% { transform: translateY(0rem); }
+}
+
+.main__section-knowledge__icons img:hover{
+    cursor: pointer;
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+
+.main__section-knowledge__techs__instruction{
+    font-size: 1.6rem;
+    color: var(--gray-200);
+    letter-spacing: .08rem;
+    line-height: 140%;
+    margin-bottom: 3rem;
+    display: inline-block;
+}
+
+
+/* .main__section-knowledge__techs__descriptions{
+
+} */
+
+.main__section-knowledge__techs p{
+    display: none;
+}
+
+.main__section-knowledge__techs p.is--active{
+    display: inline-block;
+    background-color: rgb(32, 33, 39);
+    border-radius: 0 1.5rem 1.5rem 0;
+    border-left: .6rem solid rgb(0, 45, 112);
+    padding: 1rem;
+    margin-block: 0 4rem;
+    font-size: 1.8rem;
+    line-height: 160%;
+    letter-spacing: .06rem;
+    font-weight: 400;
+
 }
 
 
 
+/* =========== SECTION CONTACT ====================== */
+
+
+.main__section-contact__contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 7rem;
+}
+
+.main__section-contact__contacts a{
+    font-size: 1.88rem;
+    background-color: rgba(54, 54, 54, 0.295);
+    padding-block: 1.3rem;
+    padding-left: 1rem;
+    border-radius: .5rem;
+    border: 1px solid rgb(20, 20, 141);
+    font-weight: 500;
+    color: rgb(168, 181, 253);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}

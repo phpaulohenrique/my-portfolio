@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,9 +14,10 @@
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/resposive.css">
 
 
-    <title>Paulo Henrique portfólio</title>
+    <title>Paulo Henrique | Portfólio</title>
 
 </head>
 
@@ -44,11 +45,24 @@
     <main>
         <section id="main__section-hello">
 
-            <p>Olá, eu sou</p>
-            <p>Paulo Henrique.</p>
-            <p>Front-end developer.</p>
+            <div class="main__section-hello__container_message col-a">
 
+                <p>Olá, eu sou</p>
+                <p>Paulo Henrique.</p>
+                <p>Front-end developer.</p>
+
+                <a class="main__section-hello__container_message_btn-contact" href="#main__section-contact">Entre em contato!</a>
+            </div>
+            
+            <img class="main__section-hello__img-i-paulo col-b" src="./assets/emoji-i-paulo.png" alt="">
+
+            <!-- <div class="main__section-hello__container_img col-b ">
+                
+            </div> -->
+            
+            
         </section>
+        <img class="main__section-hello__img-icon-arrow" src="./assets/icon-arrow.png" alt="">
 
         <section id="main__section-about-me">
             <h1>Quem sou</h1>
@@ -64,43 +78,87 @@
             <h1>Projetos</h1>
 
             <div class="main__section-projects__cards">
-                <div class="main__section-projects__cards__card">
 
+                <div class="main__section-projects__cards__card">
                     <h2 class="main__section-projects__cards__card-h2">Em breve</h2>
                     <p class="main__section-projects__cards__card-text">Pegue um café e espere um pouco, estou desenvolvendo o projeto.</p>
-
                 </div>
-            </div>
 
-            <div class="main__section-projects__cards">
                 <div class="main__section-projects__cards__card">
-            
                     <h2 class="main__section-projects__cards__card-h2">Em breve</h2>
                     <p class="main__section-projects__cards__card-text">Pegue um café e espere um pouco, estou desenvolvendo o
                         projeto.</p>
-            
                 </div>
-            </div>
 
-            <a class="main__section-projects__link-github" href="https://github.com/phpaulohenrique" target="_blank">Repositórios no GitHub</a>
+                <div class="main__section-projects__cards__card">
+                    <h2 class="main__section-projects__cards__card-h2">Em breve</h2>
+                    <p class="main__section-projects__cards__card-text">Pegue um café e espere um pouco, estou desenvolvendo o
+                        projeto.</p>
+                </div>
+
+            </div>
+<!-- 
+            <div class="main__section-projects__cards">
+                
+            </div> -->
+
+            <a class="main__section-projects__link-github" href="https://github.com/phpaulohenrique" target="_blank">Meus Repositórios no GitHub</a>
         </section>
 
 
         <section id="main__section-knowledge">
             <h1>Conhecimentos</h1>
 
-            <div class="main__section-knowledge__icons">
-                <img  src="./assets/icon-js3.svg" alt="">
-                <img src="./assets/icon-react.png" alt="">
-                <img src="./assets/icon-ts.svg" alt="">
-                <img src="./assets/icon-html.svg" alt="">
-                <img src="./assets/icon-css.svg" alt="">
-                <img src="./assets/nextjss.svg" alt="">
+            <div class="main__section-knowledge__techs">
 
-
+                <div class=" col-a">
+                    <span class="main__section-knowledge__techs__instruction">*Passe o mouse em uma das tecnologia para ler
+                        a descrição!
+                    </span>
                 
+                    <div class="main__section-knowledge__techs__descriptions">
+                
+                        <p name="js">JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas
+                            web.</p>
+                        <p name="reactjs">ReactJS é uma biblioteca JavaScript com foco em criar interfaces de usuário em páginas web.
+                        </p>
+                        <p name="html">HTML é uma linguagem de marcação utilizada na construção de páginas web.</p>
+                
+                    </div>
+                </div>
+                
+                <div class="main__section-knowledge__icons col-b">
+                
+                    <img name="js" src="./assets/icon-js.svg" alt="">
+                    <img name="reactjs" src="./assets/icon-react.png" alt="">
+                    <img name="html" src="./assets/icon-html.svg" alt="">
+                    <img src="./assets/icon-ts.svg" alt="">
+                    <img src="./assets/icon-css.svg" alt="">
+                    <img src="./assets/next-js.svg" alt="">
+                
+                </div>
 
             </div>
+
+        </section>
+
+
+        <section id="main__section-contact">
+            <h1>Contato</h1>
+
+            <div class="main__section-contact__contacts">
+                <a href="https://www.linkedin.com/in/paulo-henrique-melo-857965187/" target="_blank">
+                    <img src="./assets/icon-linkedin.svg" alt="">LinkedIn</a>
+
+                <a href="https://github.com/phpaulohenrique" target="_blank">
+                    <img src="./assets/icons8-github.svg" alt="">Github</a>
+                <a >
+                    <img src="./assets/icon-email.png" alt="">paulo.henrique1080p@gmail.com</a>
+            </div>
+
+
+
+
 
         </section>
 
