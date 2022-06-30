@@ -24,7 +24,10 @@ ScrollReveal({
     .main__section-projects__cards__card,
     .main__section-projects__link-github,
     #main__section-knowledge h1,
-    .main__section-knowledge__icons img`);
+    .main__section-knowledge__techs__instruction,
+    .main__section-knowledge__icons img,
+    #main__section-contact h1,
+    .main__section-contact__contacts a`);
 
 
 
