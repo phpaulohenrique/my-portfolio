@@ -2,21 +2,57 @@
 
 @media (min-width: 700px) {
 
-    /* body{
-        width:100%;
-        overflow: hidden;
-    } */
 
-    /* #main__section-hello, #main__section-about-me{
-        margin-left: 3rem;
-    } */
+    /* =========== GERAL ====================== */
+
+    .wrapper{
+        max-width: 1200px;
+        margin-inline: auto;
+        /* border: 1px solid tomato; */
+    }
+    
+    
+
+    /* =========== HEADER SECTION ====================== */
+    
+    #header  img {
+        display: none;
+    }
+    #header .wrapper nav{
+        display: inline-block;
+        opacity: 1;
+        transform: initial;
+    }
+
+    #header nav ul{
+        display: flex;
+        gap: 4rem;
+        letter-spacing: 1.3px;
+        font-size: 1.5rem;
+    }
+
+    nav ul li a{
+        color: #fff;
+    }
+
+    nav ul li a:hover{
+        cursor: pointer;
+        color:rgb(179, 179, 179);
+
+    }
+
 
 
     /* =========== HELLO SECTION ====================== */
 
     #header {
         padding-inline: 4rem;
-        /* background-color: tomato; */
+
+    }
+
+    .wrapper-header{
+        max-width: 1400px;
+        margin-inline: auto;
     }
 
     main section{
@@ -30,41 +66,51 @@
     #main__section-hello{
 
         /* border: 1px solid red; */
+        margin-inline: auto;
         padding: 0;
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 500px 500px;
+        /* gap: 2rem; */
         grid-template-areas: 'A B';
-        /* justify-content: space-around; */
-        margin-left: 3rem;
+        justify-content: space-evenly;
+        /* margin-left: 3rem; */
+        /* max-width: 1200px; */
         
     }
 
     .col-a {
         grid-area: A;
+        max-width: min-content;
     }
 
     .col-b {
         grid-area: B;
     }
 
+    .main__section-hello__container_img-icon-arrow{
+    bottom: 80px;
+
+    }
+
     .main__section-hello__container_message{
         text-align: left;
-        margin-left: 1rem;
+        /* margin-left: 1rem;
+        margin-top: 3rem; */
         /* margin-inline: 0; */
-        border: 1px solid green;
+        /* border: 1px solid green; */
         /* width: 50%; */
 
     }
 
     .main__section-hello__container_img{
         /* height: 20rem; */
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         /* width: 30rem; */
     }
 
     img.main__section-hello__img-i-paulo{
-        height: 20rem;
-        object-position: 0rem -3rem ;
+        height: 24rem;
+        /* object-position: 0rem -3rem ; */
         /* object-fit: fill; */
         /* text-align: center;
         /* margin-left: 3rem; */
@@ -83,7 +129,8 @@
     }
 
     img.main__section-hello__img-i-paulo:hover{
-        /* cursor:wait; */
+        height: 28rem;
+
         
     }
 
@@ -96,13 +143,22 @@
         /* padding-left: 3rem; */
     }
 
+    #main__section-about-me p{
+        max-width: 800px;
+    }
+
 
     /* =========== PROJECTS SECTION ====================== */
 
+    .main__section-projects__cards{
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+    }
 
     div .main__section-projects__cards__card{
-        width: 90%;
-        margin-inline: auto;
+        width: 300px;
+        /* margin-inline: auto; */
         /* transition: border 2s; */
     }
 
@@ -115,28 +171,26 @@
         /* transition: border 2s; */
     }
 
-    /* div .main__section-projects__cards__card:hover{
-        border: 1px solid tomato;
-
-    } */
-
-
 
     /* =========== KNOWLEDGE SECTION ====================== */
 
 
-    #main__section-knowledge{
-        
+    .main__section-knowledge__techs p.is--active {
+        font-size: 1.6rem;
+    }
+
+    .main__section-knowledge__icons img{
+        width: 8rem;
+        height: 8rem;
+
     }
 
     .main__section-knowledge__icons{
         width: 100%;
-        /* padding-left: 5%; */
-        /* flex-direction: column; */
+
         justify-content: flex-start;
         gap: 3rem;
 
-        /* background-color: tomato; */
     }
 
     .main__section-knowledge__techs{
@@ -154,10 +208,21 @@
     } */
 
     .main__section-contact__contacts a{
-        width: 50%;
+        width: 60%;
         margin-inline: auto;
+        font-size: 1.8rem;
+        padding-block: 1.4rem;
 
     }
 
             
+}
+
+
+@media (min-width: 1400px) {
+
+    .wrapper{
+        max-width: 1600px;
+    }
+
 }

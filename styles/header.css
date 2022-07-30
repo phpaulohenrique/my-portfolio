@@ -2,20 +2,30 @@
 
 #header{
     padding: 1.6rem 3rem;
-    width: 100%;
+    width: 100vw;
     background-color: #1444aa;
     background-image: linear-gradient(250deg, #07145e 0%, #101113 90%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 5.5rem;
     border-bottom: 0.2px solid rgb(77, 77, 77);
     position: fixed;
     top: 0;
     z-index: 10;
+
+}
+
+#header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#header nav{
+    display: none;
 }
 
 #header h1{
-    font-size: 2.1rem;
+    font-size: 1.9rem;
     letter-spacing: .15rem;
     font-weight: 500;
 }

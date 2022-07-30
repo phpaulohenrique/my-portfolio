@@ -31,79 +31,75 @@ ScrollReveal({
 
 
 
+// =======================================
+
+const IS_ACTIVE = 'is--active'
+
+
+
+// ============= MENU ==================================================
+const menuBtn = document.querySelector("[js-menu-btn]");
+const menuContainer = document.querySelector("[js-container-menu]");
+const menuLinks = document.querySelectorAll("[js-menu-link]");
+
+menuBtn.addEventListener("click", () => {
+    document.body.classList.toggle('menu-expanded')
+});
+
+// menuLinks.addEventListener("click", () => {
+//     document.body.classList.remove("menu-expanded");
+
+// })
+
+
+// const menuLinks = Array.from(menuLinks);
+
+Array.from(menuLinks).forEach((li) => {
+    li.addEventListener("click", () => {
+        document.body.classList.remove("menu-expanded");
+    });
+});
+
+
+
+
+// ============= TECHNOLOGIES AND TEXTS =========================
 
 const imgsTechnologies = document.querySelectorAll(".main__section-knowledge__icons img");
 
 const textsTechnologies = document.querySelectorAll(
     ".main__section-knowledge__techs p"
 );
-
 const textMouseOverText = document.querySelector('.main__section-knowledge__techs__instruction')
+const technologiesTexts = Array.from(textsTechnologies);
 
 let isMobile = window.matchMedia("(pointer:coarse)").matches;
 
-if(isMobile){
-    textMouseOverText.innerText = '*Clique em uma das tecnologias para ler a descrição!'
+if (isMobile) {
+    textMouseOverText.innerText =
+        "*Clique em uma das tecnologias para ler a descrição!";
 }
-
-console.log(isMobile);
-
-// fromArray()
-console.log(textsTechnologies);
-
-const technologiesTexts = Array.from(textsTechnologies);
-
-console.log(technologiesTexts)
-
-// const technologiesThatIKnow = technologiesTexts.reduce((pastTechnology, currentTechnology) => {
-//     return [
-//         ...pastTechnology,
-//         currentTechnology.getAttribute('name'),
-//     ];
-// }, []);
-
-// console.log(technologiesThatIKnow)
 
 function hideTechnologyText(){
     textsTechnologies.forEach((text) => {
-        text.classList.remove("is--active");
+        text.classList.remove(IS_ACTIVE);
     });
-
 }
 
 imgsTechnologies.forEach((img) => { img.addEventListener("mouseover", () => {
-    // console.log(img.name)
-    // let i
-    // const a = textsTechnologies.forEach((text) =>
-    //     i = text.getAttribute("name") == 'js'
-        
-    //     // console.log(text.getAttribute("name")
-    // );
-    // technologiesThatIKnow
 
     hideTechnologyText();
-
 
     function findIndexTechnologyTextOnMouseOverImg(textTechnology){
         return textTechnology.getAttribute("name") == img.name;
 
     }
-    console.log(technologiesTexts.findIndex(findIndexTechnologyTextOnMouseOverImg));
 
     const indexTechnologyTextMouseOver = technologiesTexts.findIndex(findIndexTechnologyTextOnMouseOverImg);
 
     textsTechnologies[indexTechnologyTextMouseOver].classList.add("is--active");
-    
-    // setTimeout(hideTechnologyText, 12000);
-
-    // console.log(i)
-    // console.log(nameAtributeTextTech);
-    // console.log(img.name == nameAtributeTextTech);
-    // console.log(a)
 });})
 
 
-// img.addEventListener('click', () => {
-//   alert('eita')
-// })
+
 

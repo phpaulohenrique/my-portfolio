@@ -23,14 +23,22 @@ img.main__section-hello__img-i-paulo{
 
 #main__section-hello{
     height: 62vh;
+    max-width: min-content;
+    margin-inline: auto;
+
 }
 
-#main__section-hello p:nth-child(2){
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: 2px solid rgb(21, 12, 102); /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: 1px; /* Adjust as needed */
+#main__section-hello span{
+    display: block;
+}
+
+#main__section-hello span:nth-child(2){
+    text-align: center;
+    overflow: hidden; 
+    border-right: 2px solid rgb(21, 12, 102);
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: 1px; 
     animation: 
         typing 2.7s steps(40, end),
         blink-caret .75s step-end infinite;
@@ -45,7 +53,7 @@ img.main__section-hello__img-i-paulo{
 /* The typewriter cursor effect */
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: rgb(20, 37, 112); }
+    50% { border-color: rgb(0, 199, 206); }
 }
 
 
@@ -59,40 +67,38 @@ main section:nth-child(1){
 }
 
 
-#main__section-hello p{
+#main__section-hello span{
     font-size: 2.5rem;
     letter-spacing: .1rem;
-    /* border: 1px solid tomato; */
-    /* display: block; */
-    /* width:20rem; */
-    /* width: min-content; */
 }
 
-#main__section-hello p:nth-child(2){
+#main__section-hello span:nth-child(2){
     font-size: 4rem;
     line-height: 140%;
     /* margin-block: 1rem; */
     font-weight: 500;
+    color: rgb(35, 0, 233);
+    text-align: center;
 
     margin-inline: 0;
     /* width:fit-content; */
 
 }
 
-#main__section-hello p:nth-child(3){
+#main__section-hello span:nth-child(3){
     line-height: 260%;
 }
 
 a.main__section-hello__container_message_btn-contact{
     /* background-color: rgba(42, 63, 156, .9); */
 
-    background-color: rgba(36, 75, 184, 0.726);
+    background-color: rgba(0, 46, 145, 0.726);
 
 
     padding: 1.5rem 4.5rem;
     margin-top: 3rem;
     display: inline-block;
-    border-radius: .5rem;
+    border-radius: 2px;
     color: #fff;
     letter-spacing: .16rem;
     font-size: 1.8rem;
@@ -113,13 +119,12 @@ a.main__section-hello__container_message_btn-contact:hover{
 }
 
 .main__section-hello__container_img-icon-arrow{
-    position: relative;
-    margin-inline: auto;
-    
-    bottom: -40%;
-    /* left:50%;
-    transform: translateX(50%); */
+    position: absolute;
 
+    left:50%;
+    /* border: 0px; */
+    bottom: 100px;
+    transform: translateX(-50%);
 
 }
 
@@ -128,7 +133,7 @@ img.main__section-hello__img-icon-arrow{
     /* bottom: 18%; */
 
 
-    animation-duration: 2s;
+    animation-duration: 1.8s;
     animation-iteration-count: infinite;
     transform-origin: bottom;
     animation-name: bounce;
@@ -175,7 +180,7 @@ img.main__section-hello__img-icon-arrow{
     /* margin-inline: .5rem; */
     width: 100%;
     text-align: left;
-    background-color: rgb(5, 15, 36);
+    background-color: rgb(6, 15, 34);
     padding: 2rem;
     border-radius:.5rem;
 }
@@ -221,7 +226,8 @@ img.main__section-hello__img-icon-arrow{
 }
 
 .main__section-knowledge__icons img{
-    max-width: 10rem;
+    width: 10rem;
+    height: 10rem;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     transform-origin: bottom;
@@ -257,16 +263,15 @@ img.main__section-hello__img-icon-arrow{
 }
 
 
-/* .main__section-knowledge__techs__descriptions{
 
-} */
 
 .main__section-knowledge__techs p{
     /* display: none; */
     visibility: hidden;
     opacity: 0;
-    transition: opacity 1500ms;
+    transition: opacity .8s;
     max-height: 0;
+
 
 }
 
@@ -275,9 +280,9 @@ img.main__section-hello__img-icon-arrow{
     visibility: visible;
     max-height: initial;
 
-    background-color: rgb(22, 25, 44);
+    background-color: rgb(7, 20, 37);
     border-radius: 0 1rem 1rem 0;
-    border-left: 8px solid rgb(0, 45, 112);
+    border-left: 9px solid rgb(0, 45, 112);
     padding: 1rem;
     margin-block: 0 4rem;
     font-size: 1.8rem;
@@ -288,7 +293,6 @@ img.main__section-hello__img-icon-arrow{
 
 
 }
-
 
 
 /* =========== SECTION CONTACT ====================== */
