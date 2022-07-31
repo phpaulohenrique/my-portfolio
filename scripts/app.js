@@ -46,21 +46,12 @@ menuBtn.addEventListener("click", () => {
     document.body.classList.toggle('menu-expanded')
 });
 
-// menuLinks.addEventListener("click", () => {
-//     document.body.classList.remove("menu-expanded");
-
-// })
-
-
-// const menuLinks = Array.from(menuLinks);
 
 Array.from(menuLinks).forEach((li) => {
     li.addEventListener("click", () => {
         document.body.classList.remove("menu-expanded");
     });
 });
-
-
 
 
 // ============= TECHNOLOGIES AND TEXTS =========================
@@ -77,7 +68,7 @@ let isMobile = window.matchMedia("(pointer:coarse)").matches;
 
 if (isMobile) {
     textMouseOverText.innerText =
-        "*Clique em uma das tecnologias para ler a descrição!";
+        "*Clique no card para ler*";
 }
 
 function hideTechnologyText(){
