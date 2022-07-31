@@ -34,6 +34,8 @@ ScrollReveal({
 // =======================================
 
 const IS_ACTIVE = 'is--active'
+const CLICK = 'click'
+const MOUSE_OVER = 'mouseover'
 
 
 
@@ -42,13 +44,13 @@ const menuBtn = document.querySelector("[js-menu-btn]");
 const menuContainer = document.querySelector("[js-container-menu]");
 const menuLinks = document.querySelectorAll("[js-menu-link]");
 
-menuBtn.addEventListener("click", () => {
+menuBtn.addEventListener(CLICK, () => {
     document.body.classList.toggle('menu-expanded')
 });
 
 
 Array.from(menuLinks).forEach((li) => {
-    li.addEventListener("click", () => {
+    li.addEventListener(CLICK, () => {
         document.body.classList.remove("menu-expanded");
     });
 });
@@ -56,12 +58,11 @@ Array.from(menuLinks).forEach((li) => {
 
 // ============= TECHNOLOGIES AND TEXTS =========================
 
-const imgsTechnologies = document.querySelectorAll(".main__section-knowledge__icons img");
+const imgsTechnologies = document.querySelectorAll("[js-techs-knowledge-img]");
 
-const textsTechnologies = document.querySelectorAll(
-    ".main__section-knowledge__techs p"
+const textsTechnologies = document.querySelectorAll("[js-techs-knowledge-text]");
+const textMouseOverText = document.querySelector("[js-knowledge-instruction-text]"
 );
-const textMouseOverText = document.querySelector('.main__section-knowledge__techs__instruction')
 const technologiesTexts = Array.from(textsTechnologies);
 
 let isMobile = window.matchMedia("(pointer:coarse)").matches;
@@ -77,18 +78,18 @@ function hideTechnologyText(){
     });
 }
 
-imgsTechnologies.forEach((img) => { img.addEventListener("mouseover", () => {
-
+imgsTechnologies.forEach((img) => { img.addEventListener(MOUSE_OVER, () => {
     hideTechnologyText();
 
-    function findIndexTechnologyTextOnMouseOverImg(textTechnology){
+    function findIndexTechnologyTextOnMouseOverImg(textTechnology) {
         return textTechnology.getAttribute("name") == img.name;
-
     }
 
-    const indexTechnologyTextMouseOver = technologiesTexts.findIndex(findIndexTechnologyTextOnMouseOverImg);
+    const indexTechnologyTextMouseOver = technologiesTexts.findIndex(
+        findIndexTechnologyTextOnMouseOverImg
+    );
 
-    textsTechnologies[indexTechnologyTextMouseOver].classList.add("is--active");
+    textsTechnologies[indexTechnologyTextMouseOver].classList.add(IS_ACTIVE);
 });})
 
 

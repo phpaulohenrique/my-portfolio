@@ -8,7 +8,6 @@
     .wrapper{
         max-width: 1200px;
         margin-inline: auto;
-        /* border: 1px solid tomato; */
     }
 
     /* =========== HEADER SECTION ====================== */
@@ -36,12 +35,11 @@
 
     nav ul li a:hover{
         cursor: pointer;
-        color:rgb(179, 179, 179);
+        color:rgb(173, 173, 173);
         
-        border-bottom: 1px solid blue;
+        border-bottom: 1px solid rgb(212, 212, 212);
 
-        /* height:30px; */
-        transition: border 1s;
+        transition: border 700ms;
 
     }
 

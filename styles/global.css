@@ -19,7 +19,7 @@ body {
     -webkit-font-smoothing: antialiased;
     font-size: 1.6rem;
     background-color: var(--blue-900);
-    color: #fff;
+    color: var(--white);
     overflow: overlay;
 }
 
@@ -34,7 +34,6 @@ select,
 button {
     font-weight: 400;
     font-family: "Saira", sans-serif;
-    /* scroll-behavior: smooth; */
 }
 
 a,

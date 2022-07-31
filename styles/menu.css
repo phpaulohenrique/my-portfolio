@@ -57,7 +57,6 @@ body.menu-expanded #menu ul{
 body.menu-expanded #menu li a{
     font-size: 2.4rem;
     color: var(--white);
-    /* text-transform: uppercase; */
     border-bottom: 1px solid rgb(51, 56, 82);
 }
 

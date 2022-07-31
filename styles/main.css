@@ -89,7 +89,6 @@ main section:nth-child(1){
 }
 
 a.main__section-hello__container_message_btn-contact{
-    /* background-color: rgba(42, 63, 156, .9); */
 
     background-color: rgb(57, 3, 206);
 
@@ -98,7 +97,7 @@ a.main__section-hello__container_message_btn-contact{
     padding: 1.5rem 4.5rem;
     margin-top: 3rem;
     display: inline-block;
-    /* border-radius: 2px; */
+
     color: #fff;
     letter-spacing: .16rem;
     font-size: 1.8rem;
@@ -114,7 +113,7 @@ a.main__section-hello__container_message_btn-contact:hover{
 
 @keyframes bounce {
     0%   { transform: translateY(0); }
-    50%  { transform: translateY(-.8rem); }
+    50%  { transform: translateY(10px); }
     100% { transform: translateY(0rem); }
 }
 
@@ -238,11 +237,6 @@ img.main__section-hello__img-icon-arrow{
 }
 
 
-@keyframes bounce {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(400px); }
-    100% { transform: translateY(0); }
-}
 
 .main__section-knowledge__icons img:hover{
     cursor: pointer;
@@ -295,7 +289,7 @@ img.main__section-hello__img-icon-arrow{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding-bottom: 14rem;
+    padding-bottom: 12rem;
 }
 
 .main__section-contact__contacts a{
@@ -304,15 +298,17 @@ img.main__section-hello__img-icon-arrow{
     padding-block: 1.3rem;
     padding-left: 1rem;
     border-radius: 2px;
+
     border: 1px solid rgb(20, 20, 141);
     font-weight: 500;
-    color: rgb(176, 188, 255);
+    color: var(--white);
     display: flex;
+
     align-items: center;
     gap: .5rem;
 }
 
 
 .main__section-contact__contacts a:hover{
-    filter:brightness(.7)
+    filter:brightness(1.5)
 }
