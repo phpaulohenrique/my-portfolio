@@ -5,12 +5,16 @@
 
     /* =========== GERAL ====================== */
 
+    .mobile-menu{
+        display: none;
+    }
+
     .wrapper{
-        max-width: 1200px;
+        max-width: 1000px;
         margin-inline: auto;
     }
 
-    /* =========== HEADER SECTION ====================== */
+    /* =========== HEADER  ====================== */
     
     #header  img {
         display: none;
@@ -43,7 +47,7 @@
 
     }
 
-    /* =========== HELLO SECTION ====================== */
+    /* =========== HELLO  ====================== */
 
     #header {
         padding-inline: 4rem;
@@ -182,7 +186,7 @@
     }
 
     .main__section-knowledge__techs{
-        grid-template-columns: 45% 55%;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: 'B A';
         display: grid;
 
@@ -200,13 +204,29 @@
 
     }
 
+
+
+
+    /* =========== FOOTER  ====================== */
+
+    #footer{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #footer > div{
+        order: initial;
+    }
+
+
+
 }
 
 
 @media (min-width: 1400px) {
 
     .wrapper{
-        max-width: 1600px;
+        max-width: 1400px;
     }
 
 

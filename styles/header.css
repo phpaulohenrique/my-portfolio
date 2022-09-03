@@ -15,7 +15,7 @@
 
 }
 
-#header div{
+#header > div{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,11 +32,44 @@
     font-weight: 500;
 }
 
-#header__icon-menu{
-    width: 3rem;
-    height: 3rem;
+
+
+.mobile-menu{
+    /* display: inline-block; */
+    display: inline-block;
+    /* flex-direction: column; */
 }
 
-#header__icon-menu:hover{
-    cursor: pointer;
+.mobile-menu div {
+    display: block;
+    width: 28px;
+    height: 1px;
+    background-color: #fafafa;
+    margin: 7px;
+    transition: 0.4s;
+
 }
+
+.mobile-menu.is--active div.line-2{
+    background-color: red;
+    display: none;
+    
+}
+
+.mobile-menu.is--active div.line-1{
+    /* display: inline-block; */
+    transform: rotate(-45deg) translate(-1px, -1px);
+
+}
+
+.mobile-menu.is--active div.line-3{
+    /* display: inline-block; */
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+
+
+
+
+
+

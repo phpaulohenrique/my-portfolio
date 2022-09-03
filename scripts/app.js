@@ -46,6 +46,7 @@ const menuLinks = document.querySelectorAll("[js-menu-link]");
 
 menuBtn.addEventListener(CLICK, () => {
     document.body.classList.toggle('menu-expanded')
+    menuBtn.classList.toggle(IS_ACTIVE);
 });
 
 
